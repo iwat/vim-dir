@@ -1,11 +1,14 @@
 syntax on
 filetype plugin indent on
 
+set backspace=indent,eol,start
 set binary
+set clipboard=unnamed
 set colorcolumn=81,121
 set expandtab
 set modeline
 set modelines=5
+set mouse=a
 set number
 set ruler
 set shiftwidth=4
