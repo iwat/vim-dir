@@ -49,7 +49,9 @@ let g:gitgutter_diff_args = '-w'
 
 " airline
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#branch#displayed_head_limit = 20
+let g:airline_section_b = "%{fnamemodify(getcwd(), ':t')}"
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#hunks#enabled = 0
 
 "nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile func *"<cr>:exe ":profile file *"<cr>
 "nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
