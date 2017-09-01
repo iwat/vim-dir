@@ -6,6 +6,8 @@ set binary
 set clipboard=unnamed
 set colorcolumn=81,121
 set expandtab
+set list
+set listchars=tab:──,trail:·,extends:>,precedes:<
 set modeline
 set modelines=5
 set mouse=a
