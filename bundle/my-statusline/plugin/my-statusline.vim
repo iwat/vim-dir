@@ -3,16 +3,17 @@ set laststatus=2
 "
 " Statusline
 "
-hi StatusLine ctermbg=white  ctermfg=darkgray   guibg=white guifg=darkgray
+hi StatusLine   ctermfg=darkyellow ctermbg=darkyellow guifg=darkgray  guibg=white
+hi StatusLineNC ctermfg=darkgray   ctermbg=darkyellow guifg=darkgray  guibg=white
 
-hi User1 ctermfg=black    ctermbg=darkcyan guifg=black    guibg=darkcyan
-hi User2 ctermfg=darkcyan ctermbg=yellow   guifg=darkcyan guibg=yellow
-hi User3 ctermfg=black    ctermbg=yellow   guifg=black    guibg=yellow
-hi User4 ctermfg=yellow   ctermbg=darkgray guifg=yellow   guibg=darkgray
-hi User5 ctermfg=cyan     ctermbg=darkgray guifg=yellow   guibg=darkgray
-hi User6 ctermfg=black    ctermbg=cyan     guifg=yellow   guibg=darkgray
-hi User7 ctermfg=magenta  ctermbg=cyan  guifg=yellow   guibg=darkgray
-hi User8 ctermfg=white    ctermbg=magenta  guifg=yellow   guibg=darkgray
+hi User1 ctermfg=black    ctermbg=darkcyan   guifg=black    guibg=darkcyan
+hi User2 ctermfg=darkcyan ctermbg=yellow     guifg=darkcyan guibg=yellow
+hi User3 ctermfg=black    ctermbg=yellow     guifg=black    guibg=yellow
+hi User4 ctermfg=yellow   ctermbg=darkyellow guifg=yellow   guibg=darkyellow
+hi User5 ctermfg=cyan     ctermbg=darkyellow guifg=cyan     guibg=darkyellow
+hi User6 ctermfg=black    ctermbg=cyan       guifg=black    guibg=cyan
+hi User7 ctermfg=magenta  ctermbg=cyan       guifg=magenta  guibg=cyan
+hi User8 ctermfg=white    ctermbg=magenta    guifg=white    guibg=magenta
 
 " powerline symbols
 let g:powerline_left_sep =      "\ue0b0"
