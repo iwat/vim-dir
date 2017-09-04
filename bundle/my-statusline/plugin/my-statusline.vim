@@ -38,7 +38,7 @@ if ! exists("*ProjectName")
     let l:path = expand('%:p')
     return (l:path =~# '^/Users/iwat/Workspaces/.\+')
           \ ? substitute(l:path, '^/Users/iwat/Workspaces/\([^/]*\)/.*', '\1', '')
-          \ : '...'
+          \ : substitute(getcwd(), '^.*/\([^/]*\)', '\1', '')
   endfunction
 
   " A replacement for %m
