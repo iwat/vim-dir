@@ -9,6 +9,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
 Plug 'leafgarland/typescript-vim'
 Plug 'mfukar/robotframework-vim'
+Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'Valloric/YouCompleteMe'
 
@@ -47,6 +48,11 @@ set secure
 
 " The Silver Searcher
 if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+  cnoreabbrev ag Ack
+  cnoreabbrev Ag Ack
+  cnoreabbrev AG Ack
+
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
 
@@ -57,15 +63,5 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-" bind \ (backward slash) to grep shortcut
-"command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-"nnoremap \ :Ag<SPACE>
-
 " ignore whitespace for git-gutter
 let g:gitgutter_diff_args = '-w'
-
-"nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile func *"<cr>:exe ":profile file *"<cr>
-"nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
