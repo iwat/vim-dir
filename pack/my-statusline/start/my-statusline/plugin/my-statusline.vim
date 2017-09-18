@@ -14,6 +14,7 @@ hi User5 ctermfg=cyan     ctermbg=darkyellow guifg=cyan     guibg=darkyellow
 hi User6 ctermfg=black    ctermbg=cyan       guifg=black    guibg=cyan
 hi User7 ctermfg=magenta  ctermbg=cyan       guifg=magenta  guibg=cyan
 hi User8 ctermfg=white    ctermbg=magenta    guifg=white    guibg=magenta
+hi User9 ctermfg=black    ctermbg=magenta    guifg=black    guibg=magenta
 
 " powerline symbols
 let g:powerline_left_sep =      "\ue0b0"
@@ -78,11 +79,12 @@ if ! exists("*ProjectName")
 end
 
 set statusline=%1*
-set statusline+=%{ProjectName()}
+set statusline+=%{g:powerline_left_sep}
+set statusline+=\ %{ProjectName()}\ 
 set statusline+=%2*
 set statusline+=%{g:powerline_left_sep}
 set statusline+=%3*
-set statusline+=\ %t    "tail of the filename
+set statusline+=\ %t\    "tail of the filename
 set statusline+=%{StatusLineM()}
 set statusline+=%{StatusLineR()}
 set statusline+=%{StatusLineSpell()}
@@ -106,3 +108,5 @@ set statusline+=\ %{substitute(&filetype,'^\[(.+)\]$','\1','')}
 set statusline+=%h      "[help]
 set statusline+=%q      "[* List]
 set statusline+=%w\     "[Preview] for preview window flag
+set statusline+=%9*
+set statusline+=%{g:powerline_right_sep}
