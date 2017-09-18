@@ -1,3 +1,21 @@
+"
+" vim-plug
+"
+call plug#begin('~/.vim/plugged')
+
+Plug 'airblade/vim-gitgutter'
+Plug 'ciaranm/detectindent'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'fatih/vim-go'
+Plug 'mfukar/robotframework-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'Valloric/YouCompleteMe'
+
+call plug#end()
+
+"
+" Anything else
+"
 syntax on
 filetype plugin indent on
 
@@ -11,6 +29,7 @@ set listchars=tab:──,trail:·,extends:>,precedes:<
 set modeline
 set modelines=5
 set mouse=a
+set nocompatible
 set number
 set ruler
 set shiftwidth=2
@@ -20,8 +39,6 @@ set tags=tags;/
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
-execute pathogen#infect()
 
 " Load external .vimrc (project specific) and prevent malicious commands
 set exrc
