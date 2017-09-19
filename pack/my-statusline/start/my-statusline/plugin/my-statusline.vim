@@ -46,7 +46,7 @@ if ! exists("*ProjectName")
   " A replacement for %m
   func StatusLineM()
     if &modified
-      return " +"
+      return "+"
     else
       return ""
     end
@@ -55,7 +55,7 @@ if ! exists("*ProjectName")
   " A replacement for %r
   func StatusLineR()
     if &readonly || ! &modifiable
-      return " " . g:powerline_symbols.readonly
+      return g:powerline_symbols.readonly . " "
     else
       return ""
     end
@@ -63,7 +63,7 @@ if ! exists("*ProjectName")
 
   func StatusLinePaste()
     if &paste
-      return " " . g:powerline_symbols.paste
+      return g:powerline_symbols.paste
     else
       return ""
     end
@@ -71,7 +71,7 @@ if ! exists("*ProjectName")
 
   func StatusLineSpell()
     if &spell
-      return " " . g:powerline_symbols.spell
+      return g:powerline_symbols.spell
     else
       return ""
     end
