@@ -80,7 +80,7 @@ end
 
 set statusline=%1*
 set statusline+=%{g:powerline_left_sep}
-set statusline+=\ %{ProjectName()}\ 
+set statusline+=\ %{ProjectName()}\ "
 set statusline+=%2*
 set statusline+=%{g:powerline_left_sep}
 set statusline+=%3*
