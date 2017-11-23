@@ -38,8 +38,8 @@ if ! exists("*ProjectName")
   "   set statusline=%{ProjectName()}
   function ProjectName()
     let l:path = expand('%:p')
-    return (l:path =~# '^/Users/iwat/Workspaces/.\+')
-          \ ? substitute(l:path, '^/Users/iwat/Workspaces/\([^/]*\)/.*', '\1', '')
+    return (l:path =~# '^'.$HOME.'/Workspaces/.\+')
+          \ ? substitute(l:path, '^'.$HOME.'/Workspaces/\([^/]*\)/.*', '\1', '')
           \ : substitute(getcwd(), '^.*/\([^/]*\)', '\1', '')
   endfunction
 
