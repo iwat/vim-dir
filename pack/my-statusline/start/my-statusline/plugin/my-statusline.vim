@@ -28,7 +28,6 @@ let g:powerline_symbols.paste = 'Þ'
 let g:powerline_symbols.paste = 'ρ'
 let g:powerline_symbols.paste = '∥'
 let g:powerline_symbols.readonly = ''
-let g:powerline_symbols.spell = 'Ꞩ'
 let g:powerline_symbols.whitespace = 'Ξ'
 
 if ! exists("*ProjectName")
@@ -68,14 +67,6 @@ if ! exists("*ProjectName")
       return ""
     end
   endfunction
-
-  func StatusLineSpell()
-    if &spell
-      return g:powerline_symbols.spell
-    else
-      return ""
-    end
-  endfunction
 end
 
 set statusline=%1*
@@ -87,7 +78,6 @@ set statusline+=%3*
 set statusline+=\ %t\    "tail of the filename
 set statusline+=%{StatusLineM()}
 set statusline+=%{StatusLineR()}
-set statusline+=%{StatusLineSpell()}
 set statusline+=%4*
 set statusline+=%{g:powerline_left_sep}
 set statusline+=%{StatusLinePaste()}
