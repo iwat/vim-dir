@@ -34,7 +34,6 @@ set nocompatible
 set number
 set ruler
 set shiftwidth=2
-set spell spelllang=en_us
 set tabstop=2
 set tags=tags;/
 

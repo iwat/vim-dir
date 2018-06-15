@@ -1,2 +1,2 @@
 setlocal colorcolumn=73
-setlocal spell
+setlocal spell spelllang=en_us
