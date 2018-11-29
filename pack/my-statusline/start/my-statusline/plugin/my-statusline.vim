@@ -91,7 +91,9 @@ set statusline+=%{g:powerline_symbols.linenr}\ %3l/%3L\ %{g:powerline_symbols.ma
 set statusline+=%7*
 set statusline+=%{g:powerline_right_sep}
 set statusline+=%8*
-set statusline+=%{strlen(&fenc)?&fenc.g:powerline_right_alt_sep:''} "file encoding
+set statusline+=\       " separator
+set statusline+=%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")} " file encoding
+set statusline+=\ %{g:powerline_right_alt_sep}
 set statusline+=\ %{&ff}\  "file format
 set statusline+=%{g:powerline_right_alt_sep}
 set statusline+=\ %{substitute(&filetype,'^\[(.+)\]$','\1','')}
