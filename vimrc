@@ -17,6 +17,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mfukar/robotframework-vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sensible'
 
 call plug#end()
 
@@ -26,11 +27,11 @@ call plug#end()
 syntax on
 filetype plugin indent on
 
-set backspace=indent,eol,start
 set binary
 set clipboard=unnamed
 set colorcolumn=81,121
 set expandtab
+set hlsearch
 set list
 set listchars=tab:──,trail:·,extends:>,precedes:<
 set modeline
@@ -38,7 +39,6 @@ set modelines=5
 set mouse=a
 set nocompatible
 set number
-set ruler
 set shiftwidth=2
 set tabstop=2
 set tags=tags;/
