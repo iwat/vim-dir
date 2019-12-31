@@ -70,3 +70,6 @@ endif
 
 " ignore whitespace for git-gutter
 let g:gitgutter_diff_args = '-w'
+
+" goimports on .go save
+let g:go_fmt_command = "goimports"
