@@ -33,6 +33,7 @@ set clipboard=unnamed
 set colorcolumn=81,121
 set expandtab
 set hlsearch
+set incsearch
 set list
 set listchars=tab:──,trail:·,extends:>,precedes:<
 set modeline
