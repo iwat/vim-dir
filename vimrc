@@ -18,6 +18,8 @@ Plug 'mfukar/robotframework-vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
+Plug 'hashivim/vim-terraform'
+Plug 'lepture/vim-jinja'
 
 call plug#end()
 
@@ -75,3 +77,6 @@ let g:gitgutter_diff_args = '-w'
 
 " goimports on .go save
 let g:go_fmt_command = "goimports"
+
+" Search selected text (virtual block)
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
